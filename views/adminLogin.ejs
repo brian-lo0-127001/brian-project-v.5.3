@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+    <div class="ls-box">
+        <h3> Admin Log-In </h3>
+        <form id="admin-login-form" method="POST" action="/">
+            <span>Enter your username</span>
+            <br />
+            <input class="textbox" type="text" id="login-admin" name="adminuser" placeholder="admin">  
+            <br />
+            <span>Enter your password</span>
+            <br>
+            <input class="textbox" type="password" id="admin-pswd" name="adminpwd">  
+            <br />
+            <span class="text-danger" id="admin-login-error">Error Placeholder</span>
+            <br />
+            <div class="text-center">
+                <input class="btn bg-warning text-dark" id="btn-admin-login" type="submit" value="Log In">
+            </div>
+            <br />
+        </form>
+    </div>
+    <br /><br />
+<%- include('partials/footer.ejs') %>

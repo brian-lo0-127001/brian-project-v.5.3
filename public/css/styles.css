@@ -1,0 +1,28 @@
+#cartList {
+    float: left;
+}
+
+#priceTotals {
+    float: right;   
+    margin-right: 5em;
+}
+
+#orderTotal {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.ls-box {
+    border: 1.5px solid gray;
+    border-radius: 4px;
+    max-width: 350px;
+    margin: auto;
+}
+
+.textbox {
+    margin: 7px;
+}
+
+.btn {
+    margin: 7px;
+}

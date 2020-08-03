@@ -1,0 +1,117 @@
+<%- include('partials/header.ejs') %>
+<script src="/js/admin.js"></script>
+<nav class="navbar navbar-light bg-light">
+<a href="/admin">Administrator Options</a>
+<a href="/reports">Reports</a>
+</nav>
+<hr />
+<div class="container">
+    <h2>Add new album to collection:</h2>
+    <form id="add-form" action="/api/addAlbumsArray">
+        <div class="form-group">
+            <div class="col-xs-4">
+               <span class="text-danger" id="title-artist-error"></span>
+               <label for="add-title">Album Title:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-title" name="add-title" placeholder="Enter Album Title" required>
+            </div>
+            <div class="col-xs-3">
+               <label for="add-artist">Artist:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-artist" name="add-artist" placeholder="Enter artist name">
+            </div>
+            <div class="col-xs-5">
+               <label for="add-coverImage">Image file path:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-coverImage" name="add-coverImage" placeholder="Enter cover art image">
+            </div>
+            <div class="col-xs-2">
+               <label for="add-price">Price:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control col-xs-2" id="add-price" name="add-price" placeholder="Enter price">
+            </div>
+            <div class="col-xs-2">
+               <label for="add-genre">Genre:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-genre" name="add-genre" placeholder="Enter music genre">
+            </div>
+            <div class="col-xs-2">
+               <label for="add-tag1">Tag 1:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-tag1" name="add-tag1" placeholder="Enter tag 1">
+            </div>
+            <div class="col-xs-2">
+               <label for="add-tag2">Tag 2:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="add-tag2" name="add-tag2" placeholder="Enter tag 2">
+            </div>
+            <button type="submit" class="btn btn-primary btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+<hr />
+
+<div>
+    <h2> Update an album </h2>
+    <div>
+        <input type="text" id="updateSearch" placeholder="Album name or artist">  <br />
+        <span id="updateResult"></span>
+    </div>
+</div>
+
+<div class="container">
+    <h4>Update information for selected album:</h4>
+    <form id="update-form" action="/api/updateAlbumsArray">
+        <div class="form-group">
+            <div class="col-xs-4">
+                <label for="update-title">Album Title:</label>
+                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <input type="text" class="form-control" id="update-title" name="update-title" placeholder="Enter Album Title">
+            </div>
+            <div class="col-xs-3">
+                <label for="update-artist">Artist:</label>
+                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <input type="text" class="form-control" id="update-artist" name="update-artist" placeholder="Enter artist name">
+            </div>
+            <div class="col-xs-5">
+                <label for="update-coverImage">Image file path:</label>
+                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <input type="text" class="form-control" id="update-coverImage" name="update-coverImage" placeholder="Enter cover art image">
+            </div>
+            <div class="col-xs-2">
+                <label for="update-price">Price:</label>
+                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <input type="text" class="form-control col-xs-2" id="update-price" name="update-price" placeholder="Enter price">
+            </div>
+            <div class="col-xs-2">
+                <label for="update-genre">Genre:</label>
+                <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+                <input type="text" class="form-control" id="update-genre" name="update-genre" placeholder="Enter music genre">
+            </div>
+            <div class="col-xs-2">
+               <label for="update-tag1">Tag 1:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="update-tag1" name="update-tag1" placeholder="Enter tag 1">
+            </div>
+            <div class="col-xs-2">
+               <label for="update-tag2">Tag 2:</label>
+               <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+               <input type="text" class="form-control" id="update-tag2" name="update-tag2" placeholder="Enter tag 2">
+            </div>
+            <button type="submit" class="btn btn-primary btn-success">Submit</button>
+        </div>
+    </form>
+</div>
+<hr />
+<div class="container">
+   <h2>Delete an album:</h2>
+   <form id="delete-form" action="/api/deleteAlbumsArray">
+      <div class="form-group col-xs-2">
+         <label for="delete-album">Album ID:</label>
+         <h3 id="validationFdbk" class="bg-danger text-white"></h3>
+            <input type="text" class="form-control" id="delete-album" name="delete-album" placeholder="Enter Album ID to delete">
+      </div>
+      <button type="submit" class="btn btn-primary btn-danger">Submit</button>
+   </form>
+</div>
+<%- include('partials/footer.ejs') %>

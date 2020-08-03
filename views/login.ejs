@@ -1,0 +1,28 @@
+<%- include('partials/header.ejs') %>
+    <script src="/js/login.js"></script>
+    <div class="ls-box">
+        <h3> Log-In </h3>
+        <form id="login-form" action="/">
+            <span>Enter your email</span>
+            <br />
+            <input class="textbox" type="text" id="login-user" placeholder="desdinova@sirius.com">  
+            <br />
+            <span>Enter your password</span>
+            <br>
+            <input class="textbox" type="password" id="login-pswd">  
+            <br />
+            <span class="text-danger" id="login-error">Error Placeholder</span>
+            <br />
+            <div class="text-center">
+                <input class="btn bg-warning text-dark" id="btn-login" type="submit" value="Log In">
+            </div>
+            <br />
+        </form>
+    </div>
+    <hr>
+    <span>Don't have an account?</span>
+    <br />
+    <input class="btn bg-info text-dark" id="btn-signup" type="submit" value="Create New Account"
+        action="/signup">
+    <br /><br />
+<%- include('partials/footer.ejs') %>

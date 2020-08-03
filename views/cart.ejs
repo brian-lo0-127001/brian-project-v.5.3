@@ -1,0 +1,24 @@
+<%- include('partials/header.ejs') %>
+
+<h1 style="text-align: left"> Shopping Cart </h1>
+<hr /> 
+<div id="cartList">
+ 
+</div>
+
+<div id="priceTotals">
+    <h5> Order Summary </h5>
+    <hr />
+    <p id = "itemsTotal"> Items: $0.00 </p>
+    <p id = "taxTotal"> Tax: $0.00 </p>
+    <p id = "shippingTotal"> Shipping: $0.00 </p>
+    <hr />
+    <p id="orderTotal"> Order Total: $0.00 </p>
+    <hr />
+    <button class="btn btn-primary" id="placeOrder"> Place Order </button>
+    <span id="cartError"> </span>
+</div>
+
+<!--footer.ejs not added because it displays incorrectly at this time-->
+   </body>
+</html>

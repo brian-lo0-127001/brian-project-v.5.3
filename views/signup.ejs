@@ -1,0 +1,57 @@
+<%- include('partials/header.ejs') %>
+    <script src="/js/signup.js"></script>
+    
+    <div class="ls-box">
+        <h3> Sign-Up </h3>
+        <form id="signup-form" action="/">
+            <span>Your name</span>
+            <br />
+            <input class="textbox" type="text" id="signup-name" placeholder="Desdinova Dharma"> 
+            <br />
+            <span class="text-danger" id="signup-name-error">Error</span>
+            <br />
+            <span>Your email</span>
+            <br />
+            <input class="textbox" type="text" id="signup-email" placeholder="desdinova@sirius.com">  
+            <br />
+            <span class="text-danger" id="signup-email-error">Error</span>
+            <br />
+            <span>Your ZIP</span>
+            <br />
+            <input class="textbox" type="text" id="signup-zip">  
+            <br />
+            <span class="text-danger" id="signup-zip-error">Error</span>
+            <br />
+            <span>Your City</span>
+            <br />
+            <input class="textbox" type="text" id="signup-city">  
+            <br />
+            <span class="text-danger" id="signup-city-error">Error</span>
+            <br />
+            <span>Your State</span>
+            <br />
+            <input class="textbox" type="text" id="signup-state">  
+            <br />
+            <span class="text-danger" id="signup-state-error">Error</span>
+            <br />
+            <span>Enter your password</span>
+            <br>
+            <input class="textbox" type="text" id="signup-pswd">  
+            <br />
+            <span class="text-danger" id="signup-pswd-error">Error</span>
+            <br />
+            <span>Re-enter your password</span>
+            <br>
+            <input class="textbox" type="text" id="signup-pswd">  
+            <br />
+            <span class="text-danger" id="signup-reenter-error">Error</span>
+            <br />
+            <div class="text-center">
+            <input class="btn bg-warning text-dark" id="btn-create-account" type="submit" 
+                value="Create Account">
+            </div>
+            <br />
+        </form>
+    </div>
+    <br /><br />
+<%- include('partials/footer.ejs') %>
